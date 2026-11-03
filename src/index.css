@@ -1,0 +1,42 @@
+:root {
+  --font: "Antonio", sans-serif;
+  --sans-font: sans-serif;
+  /* light mode */
+  --main: #f5f5f5;
+  --bg: #ffffff;
+  --accent: #5e67e6;
+  --text-color: #303030;
+  --border: rgba(0, 0, 0, 0.12);
+}
+/* dark mode */
+[data-theme="dark"] {
+  --bg: #282829;
+  --main: #333333;
+  --accent: #d0ff71;
+  --text-color: #ffffff;
+  --border: rgba(255, 255, 255, 0.12);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--sans-font);
+  color-scheme: dark;
+  background-color: var(--bg);
+  color: var(--text-color);
+  margin: 0;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+

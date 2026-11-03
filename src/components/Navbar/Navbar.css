@@ -1,0 +1,138 @@
+.navbar {
+  position: sticky;
+  top: 20px;
+  z-index: 100;
+}
+
+.navbar-inner {
+  width: 50%;
+  min-width: 720px;
+  backdrop-filter: blur(12px);
+  margin: auto;
+  border: 1px solid var(--border);
+  padding: 10px 20px;
+  border-radius: 999px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.navbar-logo span {
+  color: var(--accent);
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.15rem;
+  letter-spacing: 0.6px;
+  font-weight: 400;
+  opacity: 0.8;
+  transition:
+    color 0.2s,
+    opacity 0.2s;
+}
+
+.navbar-links a:hover {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.navbar-cta {
+  background-color: var(--text-color);
+  color: var(--bg);
+  padding: 6px 20px;
+  border-radius: 999px;
+  font-weight: 400;
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: background-color 0.4s;
+}
+
+.navbar-cta:hover {
+  background-color: var(--accent);
+}
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+.nav-contact {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-inner {
+    width: 90%;
+    min-width: 0;
+  }
+
+  .navbar-cta {
+    display: none;
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0;
+    background-color: var(--bg);
+  }
+
+  .navbar-links.open {
+    display: flex;
+    background: var(--bg);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+
+  .navbar-links.open li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar-links .nav-contact a {
+    display: inline-block;
+    background-color: var(--text-color);
+    color: var(--bg);
+    padding: 6px 24px;
+    border-radius: 999px;
+    opacity: 1;
+  }
+  .navbar-links .nav-contact a:hover {
+    background-color: var(--accent);
+    color: var(--bg);
+  }
+  .nav-contact {
+    display: block;
+  }
+}

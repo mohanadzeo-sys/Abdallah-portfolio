@@ -1,0 +1,110 @@
+#services {
+  padding: 100px 0;
+  scroll-margin-top: 80px;
+}
+
+#services .services-container {
+  width: min(90%, 1200px);
+  margin: auto;
+}
+
+#services .services-header {
+  margin-bottom: 48px;
+}
+#services .services-header h2 {
+  margin: 0 0 16px;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+#services .services-header p {
+  margin: 0;
+  max-width: 55ch;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+/* cards */
+#services .services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+#services .service {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  transition:
+    border-color 0.3s,
+    transform 0.3s;
+}
+#services .service:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+#services .service-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#services .service-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  color: var(--accent);
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+#services .service-icon:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+#services .service-number {
+  font-size: 1.1rem;
+  font-weight: 700;
+  opacity: 0.4;
+}
+
+#services .service h3 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+}
+#services .service p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+/* call to action */
+#services .services-cta {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background-color: var(--text-color);
+  color: var(--bg);
+  text-decoration: none;
+  transition: background-color 0.4s;
+}
+#services .services-cta:hover {
+  background-color: var(--accent);
+}
+
+@media (max-width: 800px) {
+  #services .services-grid {
+    grid-template-columns: 1fr;
+  }
+  #services .service {
+    padding: 24px;
+  }
+}

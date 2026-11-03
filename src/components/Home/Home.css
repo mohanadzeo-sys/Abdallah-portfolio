@@ -1,0 +1,76 @@
+#home {
+  min-height: 100dvh;
+  box-sizing: border-box;
+  padding: 60px 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home .home-container {
+  width: min(90%, 1200px);
+  display: flex;
+  gap: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+#home .home-left {
+  text-align: right;
+}
+#home .home-right {
+  text-align: left;
+}
+#home h1,
+#home p {
+  margin: 0;
+}
+#home h1 {
+  color: var(--text-color);
+  font-size: clamp(1.75rem, 3.2vw, 3rem);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+#home .job-title {
+  font-size: clamp(1.75rem, 3.2vw, 3rem);
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+#home p {
+  color: var(--accent);
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+#home .home-container > div:not(.img) {
+  flex: 1;
+  min-width: 0;
+}
+
+#home .img {
+  flex-shrink: 0;
+}
+
+#home img {
+  display: block;
+  width: clamp(260px, 30vw, 450px);
+  height: auto;
+  border-radius: 30px;
+}
+
+@media (max-width: 1100px) {
+  #home .home-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+  #home .home-left,
+  #home .home-right {
+    text-align: center;
+  }
+  #home .home-container > div:not(.img) {
+    flex: none;
+  }
+  #home h1,
+  #home .job-title {
+    font-size: 2rem;
+  }
+}

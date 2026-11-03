@@ -1,0 +1,149 @@
+#contact {
+  padding: 100px 0;
+  scroll-margin-top: 80px;
+}
+#contact .contact-container {
+  width: min(90%, 1200px);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+#contact .form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#contact .form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#contact form .form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#contact form .form-input label {
+  color: var(--accent);
+}
+
+#contact h2 {
+  margin: 0 0 16px;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+#contact form .form-input input,
+#contact form .form-input textarea {
+  box-sizing: border-box;
+  width: 100%;
+  font: inherit;
+  background-color: var(--main);
+  color: var(--text-color);
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+#contact form .form-input input::placeholder,
+#contact form .form-input textarea::placeholder {
+  color: var(--text-color);
+  opacity: 0.5;
+}
+#contact form .form-input input:focus,
+#contact form .form-input textarea:focus {
+  box-shadow: 0 0 0 2px var(--accent);
+}
+#contact form .form-input input {
+  height: 50px;
+  padding: 10px 20px;
+}
+#contact form .form-input textarea {
+  min-height: 140px;
+  padding: 16px 20px;
+  resize: vertical;
+}
+
+#contact .form-btn {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+  background-color: var(--text-color);
+  color: var(--bg);
+  padding: 12px 28px;
+  border-radius: 999px;
+  font: inherit;
+  transition: background-color 0.4s;
+}
+#contact .form-btn:hover {
+  background-color: var(--accent);
+}
+
+#contact .social p {
+  margin: 0 0 28px;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  max-width: 45ch;
+}
+
+#contact .label {
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+#contact .contact-details {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+#contact .contact-details li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 1.15rem;
+}
+#contact .contact-details a {
+  width: fit-content;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+#contact .contact-details a:hover {
+  color: var(--accent);
+}
+
+#contact .social > .label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+#contact .social-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+}
+#contact .social-links a {
+  display: inline-block;
+  font-size: 2rem;
+  color: var(--text-color);
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+#contact .social-links a:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 900px) {
+  #contact .contact-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
