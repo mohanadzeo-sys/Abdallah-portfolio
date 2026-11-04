@@ -1,67 +1,43 @@
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
+
+const navLinks = [
+  { label: "Home", to: "/" },
+  { label: "About", to: "/about" },
+  { label: "Services", to: "/services" },
+  { label: "Projects", to: "/projects" },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const closeMenu = () => setIsOpen(false);
+
   return (
     <nav className="navbar">
       <div className="navbar-container navbar-inner">
-        <a href="#home" className="navbar-logo">
+        <Link to="/" className="navbar-logo" onClick={closeMenu}>
           Abdullah <span>Gamal</span>
-        </a>
+        </Link>
 
         <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
-          <li>
-            <a
-              href="#home"
-              onClick={() => {
-                setIsOpen(false);
-              }}
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#about"
-              onClick={() => {
-                setIsOpen(false);
-              }}
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#services"
-              onClick={() => {
-                setIsOpen(false);
-              }}
-            >
-              Services
-            </a>
-          </li>
-          <li>
-            <a
-              href="#projects"
-              onClick={() => {
-                setIsOpen(false);
-              }}
-            >
-              Projects
-            </a>
-          </li>
-
+          {navLinks.map(({ label, to }) => (
+            <li key={to}>
+              <NavLink to={to} end={to === "/"} onClick={closeMenu}>
+                {label}
+              </NavLink>
+            </li>
+          ))}
           <li className="nav-contact">
-            <a href="#contact" onClick={() => setIsOpen(false)}>
+            <NavLink to="/contact" onClick={closeMenu}>
               Contact
-            </a>
+            </NavLink>
           </li>
         </ul>
 
-        <a href="#contact" className="navbar-cta">
+        <Link to="/contact" className="navbar-cta">
           Contact
-        </a>
+        </Link>
 
         <button
           className="navbar-toggle"
@@ -71,7 +47,6 @@ export default function Navbar() {
         >
           ☰
         </button>
-
       </div>
     </nav>
   );

@@ -55,6 +55,16 @@
   opacity: 1;
 }
 
+.navbar-links a.active {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.navbar-links .nav-contact a.active {
+  color: var(--bg);
+  background-color: var(--accent);
+}
+
 .navbar-cta {
   background-color: var(--text-color);
   color: var(--bg);

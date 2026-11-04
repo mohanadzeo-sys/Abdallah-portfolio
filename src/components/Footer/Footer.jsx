@@ -1,13 +1,14 @@
 import "./Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { socials } from "../../data/socials.jsx";
+import { Link } from "react-router-dom";
 
 const links = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/home" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Work", href: "/work" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {
@@ -16,9 +17,9 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-top">
           <div className="footer-brand">
-            <a href="#home" className="footer-logo">
+            <Link to={"/home"} className="footer-logo">
               Abdullah <span>Gamal</span>
-            </a>
+            </Link>
             <p>
               Content creator and digital marketing specialist helping brands
               grow with short-form video.
@@ -29,7 +30,7 @@ export default function Footer() {
             <ul className="footer-links">
               {links.map(({ label, href }) => (
                 <li key={label}>
-                  <a href={href}>{label}</a>
+                  <Link to={href}>{label}</Link>
                 </li>
               ))}
             </ul>

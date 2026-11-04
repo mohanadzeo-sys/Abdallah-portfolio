@@ -1,23 +1,39 @@
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Services from "./components/Services/Services.jsx";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
-import ToggleBtn from "./components/ToggleBtn/ToggleBtn.jsx";
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./components/HomePage/HomePage.jsx";
+import AboutPage from "./components/AboutPage/AboutPage.jsx";
+import ServicesPage from "./components/ServicesPage/ServicesPage.jsx";
+import WorkPage from "./components/WorkPage/WorkPage.jsx";
+import ContactPage from "./components/ContactPage/ContactPage.jsx";
+import Layout from "./components/Layout/Layout.jsx";
+import NotFound from "./components/NotFound/NotFound.jsx";
 
 function App() {
+  let paths = createBrowserRouter([
+    {
+      path: "",
+      element: <Layout />,
+      children: [
+        { index: true, element: <HomePage /> },
+        { path: "home", element: <HomePage /> },
+        { path: "about", element: <AboutPage /> },
+        { path: "services", element: <ServicesPage /> },
+        { path: "work", element: <WorkPage /> },
+        { path: "contact", element: <ContactPage /> },
+        { path: "*", element: <NotFound /> },
+      ],
+    },
+  ]);
   return (
     <>
-      <Navbar></Navbar>
+      <RouterProvider router={paths}></RouterProvider>
+      {/* <Navbar></Navbar>
       <Home></Home>
       <About></About>
       <Services></Services>
       <Contact></Contact>
       <Footer></Footer>
-      <ToggleBtn></ToggleBtn>
+      <ToggleBtn></ToggleBtn> */}
     </>
   );
 }

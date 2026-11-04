@@ -1,6 +1,7 @@
 import "./Services.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { services } from "../../data/services";
+import { Link } from "react-router-dom";
 
 export default function Services() {
   return (
@@ -31,9 +32,9 @@ export default function Services() {
           ))}
         </div>
 
-        <a href="#contact" className="services-cta">
+        <Link to={"/services"} className="services-cta">
           Let’s talk
-        </a>
+        </Link>
       </div>
     </section>
   );
