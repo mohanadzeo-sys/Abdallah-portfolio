@@ -27,13 +27,6 @@ function App() {
   return (
     <>
       <RouterProvider router={paths}></RouterProvider>
-      {/* <Navbar></Navbar>
-      <Home></Home>
-      <About></About>
-      <Services></Services>
-      <Contact></Contact>
-      <Footer></Footer>
-      <ToggleBtn></ToggleBtn> */}
     </>
   );
 }

@@ -66,14 +66,12 @@
   font-size: 0.85rem;
 }
 
-
 .work-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
   gap: 24px;
 }
 
-/* Featured project */
 .project-card--featured {
   grid-column: 1 / -1;
   border-color: var(--accent, #22d3ee);
