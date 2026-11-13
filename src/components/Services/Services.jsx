@@ -32,7 +32,7 @@ export default function Services() {
           ))}
         </div>
 
-        <Link to={"/services"} className="services-cta">
+        <Link to={"/contact"} className="services-cta">
           Let’s talk
         </Link>
       </div>

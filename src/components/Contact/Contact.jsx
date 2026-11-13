@@ -3,33 +3,36 @@ import "./Contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { socials } from "../../data/socials.jsx";
 
-// formspree with email
-// Formspree works almost the same as what I described for Web3Forms, so the handleSubmit outline from my last message still applies. The differences are in the setup and the request.
-
-// Setup
-// In your Formspree dashboard, click New Form and name it (for example “Portfolio contact”).
-// Set the recipient email to Abdullah’s, since that’s where messages will be sent. Formspree may email that address to confirm it, so ask him to check his inbox, including spam, and confirm.
-// Copy the form ID: the short code at the end of your endpoint URL, which looks like https://formspree.io/f/xxxxxxxx.
-// Put the ID in your .env file so it’s easy to change later:
-// VITE_FORMSPREE_ID=your_form_id
-
-// You read it with import.meta.env.VITE_FORMSPREE_ID. Unlike Web3Forms, there’s no access key in the request body. The form ID in the URL identifies the form.
-
-// What changes in the fetch call
-// URL: https://formspree.io/f/${yourFormId}.
-// Method: POST.
-// Headers: Content-Type: application/json and Accept: application/json. The Accept header matters. Without it, Formspree treats the request like a normal HTML form post and tries to redirect to its own thank-you page instead of returning JSON.
-// Body: JSON.stringify(formData), since your state object already has the right name, email, and message keys.
-// Checking success: use res.ok, and console.log(await res.json()) once to see what a success and an error look like.
-
-// The rest is the same as before: e.preventDefault(), a status state (idle, sending, success, error), try/catch for network failures, resetting formData on success, and a message under the button.
-
-// Two things to check on Formspree’s side
-// Free plan limits. One guide I found says 50 submissions a month on the free tier, but that may be outdated. Check your plan in the dashboard, since a busy portfolio could hit a limit.
-// Spam protection. In the form’s settings, look for the spam and domain options, and check their docs for the hidden honeypot field. Turn on whatever fits once the site has a real domain.
-
+const FORMSPREE_URL = "https://formspree.io/f/mbgodold";
 const whatsappUrl = "https://wa.me/+201272745136";
 export default function Contact() {
+  const [status, setStatus] = useState("idle");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    try {
+      const response = await fetch(FORMSPREE_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (err) {
+      setStatus("error");
+    }
+  };
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -40,11 +43,7 @@ export default function Contact() {
       <div className="contact-container">
         <div className="form">
           <h2>Let’s work together</h2>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-            }}
-          >
+          <form onSubmit={handleSubmit}>
             <div className="form-input">
               <label htmlFor="name">Name</label>
               <input
@@ -88,9 +87,18 @@ export default function Contact() {
                 }}
               ></textarea>
             </div>
-            <button type="submit" className="form-btn" onClick={() => {}}>
-              Send message
+            <button
+              className="form-btn"
+              type="submit"
+              disabled={status === "loading"}
+            >
+              {status === "loading" ? "Sending..." : "Send Message"}
             </button>
+
+            {status === "success" && <p>Thanks! Your message has been sent.</p>}
+            {status === "error" && (
+              <p>Something went wrong, please try again.</p>
+            )}
           </form>
         </div>
 

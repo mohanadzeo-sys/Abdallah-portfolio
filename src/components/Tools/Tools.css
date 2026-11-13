@@ -1,0 +1,32 @@
+.tools {
+  padding: 60px 0;
+}
+.tools-container {
+  width: min(90%, 1200px);
+  margin: auto;
+}
+.tools h2 {
+  margin: 0 0 32px;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+.tools-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.tools-list li {
+  padding: 10px 22px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 1.05rem;
+  transition:
+    border-color 0.3s,
+    transform 0.3s;
+}
+.tools-list li:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
