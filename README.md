@@ -1,16 +1,85 @@
-# React + Vite
+# Abdallah's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A multi-page portfolio website for Abdallah, a digital marketing specialist focused on content creation, content strategy and social media growth. Built as a freelance project.
 
-Currently, two official plugins are available:
+**Live site:** _add the link after deployment_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Multi-page navigation with React Router (Home, About, Services, Work, Contact)
+- **Work** page with case studies (problem, how it was handled, result) in a responsive grid, with a featured project at the top
+- Contact form connected to Formspree, with loading, success and error states
+- Dark / light mode toggle
+- Responsive layout with a mobile menu
+- Custom 404 page
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React + Vite
+- React Router (`react-router-dom`)
+- Plain CSS with CSS variables for theming
+- Formspree for form submissions
+- Space Grotesk (Google Fonts)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/YOUR-USERNAME/abdallah-portfolio.git
+cd abdallah-portfolio
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the dev server
+npm run dev
+```
+
+Other scripts:
+
+```bash
+npm run build     # production build
+npm run preview   # preview the production build locally
+```
+
+## Project Structure
+
+```
+src/
+├── components/   # Navbar, Footer, Layout, shared sections
+├── data/         # projects.js (case studies data)
+├── pages/        # Home, About, Services, Work, Contact, NotFound
+├── App.jsx       # Routes
+└── main.jsx
+```
+
+## Adding a New Project
+
+Open `src/data/projects.js` and add an object to the array:
+
+```js
+{
+  id: "project-id",
+  name: "Project Name",
+  industry: "Industry",
+  goal: "Main goal",
+  format: "Optional, e.g. 12 posts",
+  problem: "...",
+  approach: "...",
+  result: "...",
+  metrics: [{ value: "+75%", label: "Metric name" }], // optional
+  featured: false, // optional, true makes it full width
+}
+```
+
+## Contact Form
+
+The form sends submissions to Formspree. To use your own form, replace `FORMSPREE_URL` in the Contact component with your endpoint.
+
+## Deployment
+
+Works on Vercel or Netlify. Because the site uses client-side routing, configure a rewrite so every path returns `index.html`, otherwise refreshing a page like `/work` returns a 404.
+
+## Author
+
+Built by Mohanad Fekry.
