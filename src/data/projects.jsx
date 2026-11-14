@@ -1,11 +1,11 @@
 export const projects = [
-     {
+  {
     id: "garak",
     name: "Garak",
     featured: true,
     industry: "Real Estate (Tanta)",
     goal: "Sales & growth",
-    problem:
+    overview:
       "The company's account had been banned. Engagement and views had dropped, and calls and sales had fallen to just one or two calls a day.",
     approach:
       "I defined the target audience: people interested in buying apartments in Tanta, not renting. I built a content strategy for the company itself, identifying the customers' problems and how they think, and how to build the image in their minds that the company stands out in the field. I also developed the company's competitive advantage: more than 9 years in the market.",
@@ -24,12 +24,11 @@ export const projects = [
     industry: "Beauty & Skincare",
     goal: "Brand awareness",
     format: "13 posts · 7 Reels + 6 Carousels",
-    problem:
+    overview:
       "A new beauty brand with no audience yet. Nobody knew the name, the logo or the products, and it had to feel premium from day one.",
     approach:
       "Built an awareness-first plan for women aged 18–35: a coming-soon teaser, a brand introduction reel, logo-reveal reels, a packaging and visual-identity moment, then product carousels in one consistent design language, closing with Eid offers.",
-    result:
-      "A complete launch plan that walks the audience from curiosity to brand recognition to their first offer.",
+    URL: "https://drive.google.com/file/d/1eXaz9y3arikjnsJxMRnH_ZSvM4bbpBwp/view?usp=drive_link",
   },
   {
     id: "delta-pyramids",
@@ -37,12 +36,11 @@ export const projects = [
     industry: "Real Estate Development",
     goal: "Sales",
     format: "12 posts · 8 Reels + 4 Carousels",
-    problem:
-      "Real estate content is full of promises. Investors, buyers and landowners needed proof that the developer actually delivers.",
+    overview:
+      "Egyptian real estate development & construction company since 2014, based in Tanta.Focused on residential towers & commercial units in Tanta, Fifth Settlement & El Shorouk, offering luxury finishing and flexible payment plans for living & investment.Brand positioning: Trust, prime location, and quality.",
     approach:
       "Built the plan around one pillar: “we act, not just talk”. Reels show real units and sales, construction progress with the site engineer, and a landowner-partnership message, with direct investor-style hooks and a simple “interested” comment CTA.",
-    result:
-      "A proof-driven sales plan aimed at investors, young couples and landowners, designed to turn views into inquiries.",
+    URL: "https://drive.google.com/file/d/12X3n00CwiRkOQ0p0K6EHegjOgDOuMhpD/view?usp=drive_link",
   },
   {
     id: "aj-medical",
@@ -50,12 +48,11 @@ export const projects = [
     industry: "Healthcare & Personal Care Retail",
     goal: "Eid sales campaign",
     format: "9 posts · Carousels",
-    problem:
-      "Eid is the busiest shopping window of the year. The brand needed offers that were instantly clear and urgent enough to convert.",
+    overview:
+      "AJ Medical is a Saudi health and beauty e-commerce brand based in Riyadh and Dammam, offering food supplements, skincare, and personal health care products designed to be part of the daily care routine.",
     approach:
       "Designed a carousel campaign with one clear mechanic per post: travel and family bundles, personal-care sets, buy 2 get the third at half price, a gift box on large orders, free delivery, and a limited-time EID25 discount code.",
-    result:
-      "A full Eid campaign from opening announcement to last-hours urgency, with every post tied to a single offer.",
+    URL: "https://drive.google.com/file/d/13AuBocYRvEOT0Y9v1EM4LIQ30Hs26Upw/view?usp=drive_link",
   },
   {
     id: "iron-masry",
@@ -63,12 +60,11 @@ export const projects = [
     industry: "Cast Iron Cookware",
     goal: "Sales",
     format: "12+ posts · Reels & Carousels",
-    problem:
-      "Cast iron costs more than regular cookware, and customers compare on price without understanding what they get: heat retention, durability and better results.",
+    overview:
+      "Iron Masry is an Egyptian cookware brand offering high-quality cast iron pots and pans for healthy cooking, with even heat distribution, lifetime warranty, and shipping to all governorates.",
     approach:
-      "Built a sales campaign for three audiences: brides setting up their kitchens, restaurants, and home cooks. Educational reels and carousels explain why the pan matters more than the stove, with keyword-comment CTAs and Eid offers.",
-    result:
-      "A campaign that turns an unfamiliar premium product into a clear reason to buy for each audience.",
+      "I built the plan to highlight product benefits vs traditional cookware, use chef reviews and UGC for trust, lean on fun Egyptian-style hooks, and push DM / WhatsApp orders during offers like White Friday.",
+    URL: "https://drive.google.com/file/d/1blYj7EQmKvOvSHWrRNq0riaefeb1gA58/view?usp=drive_link",
   },
   {
     id: "elraslan",
@@ -76,12 +72,11 @@ export const projects = [
     industry: "Industrial Refrigeration (B2B)",
     goal: "Authority & trust",
     format: "12+ posts · Reels & Carousels",
-    problem:
-      "Buyers like hotels, hospitals and pharma companies choose on trust, not flashy ads, and a mistake in cold storage means direct financial loss.",
+    overview:
+      "El Raslan is an Egyptian manufacturer based in Tanta with a Cairo office, specialized in cold rooms, rapid freezing tunnels, sandwich panels, and refrigerated truck boxes, serving food, logistics, and industrial clients across Egypt with installation and after-sales support.",
     approach:
-      "Positioned the brand as the expert: engineer-led reels, a carousel for each sector, early warning signs for maintenance, and seasonal posts for the summer peak and Eid, all ending in a clear contact CTA.",
-    result:
-      "An authority plan that presents a company active since 1978 as the safe, reliable choice.",
+      "Simplifying complex industrial products into clear content.Building credibility around quality, installation, and warranty.Answering real buyer questions about sizes, customization, and maintenance.Driving WhatsApp and page messages as the main conversion path.",
+    URL: "https://drive.google.com/file/d/1o4p7c1w_3dPQCCKBhwYHDgqGocs6AVqF/view?usp=drive_link",
   },
   {
     id: "cairo-b-panel",
@@ -89,11 +84,10 @@ export const projects = [
     industry: "Insulated Panels & Cold Rooms",
     goal: "Education & sales",
     format: "Content plan + Eid al-Adha campaign",
-    problem:
-      "Clients compare insulated panels by price and ignore density, thermal efficiency and warranty, so the cheapest option wins and costs them more later.",
+    overview:
+      "Cairo B Panel is an Egyptian industrial company specialized in manufacturing cold storage rooms, freezing rooms, and insulated car boxes with high quality and standard specifications for food and logistics sectors.",
     approach:
-      "Reframed the conversation: real insulation means holding the cold, cutting power use and lasting longer. Content includes “5 questions before building a cold room”, daily-loss visuals, a checklist offer, and an Eid al-Adha campaign about getting storage ready before the peak.",
-    result:
-      "A plan that moves the buyer's question from “how much?” to “how good?”, backed by a seasonal sales push.",
+      "I worked on developing a marketing direction for the brand, focusing on understanding the target audience, identifying content opportunities, and building a structured content plan.",
+    URL: "https://drive.google.com/file/d/1h-hgQwAvTDp_aks5CFhrXEVKU7epDaS-/view?usp=drive_link",
   },
 ];

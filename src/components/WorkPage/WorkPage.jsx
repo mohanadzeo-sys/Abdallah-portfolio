@@ -9,17 +9,8 @@ const focusAreas = [
 ];
 
 function ProjectCard({ project }) {
-  const {
-    name,
-    industry,
-    goal,
-    format,
-    problem,
-    approach,
-    result,
-    metrics,
-    featured,
-  } = project;
+  const { name, industry, goal, overview, approach, URL, metrics, featured } =
+    project;
 
   return (
     <article
@@ -34,19 +25,22 @@ function ProjectCard({ project }) {
         {name}
         {featured && <span className="project-badge">Featured</span>}
       </h3>
-      {format && <p className="project-format">{format}</p>}
 
       <div className="project-block">
-        <h4>Problem</h4>
-        <p>{problem}</p>
+        <h4>About Brand</h4>
+        <p>{overview}</p>
       </div>
       <div className="project-block">
         <h4>How I handled it</h4>
         <p>{approach}</p>
       </div>
       <div className="project-block project-result">
-        <h4>Result</h4>
-        <p>{result}</p>
+        <h4>My Work</h4>
+        <p>
+          <a href={URL}>
+            Click <span>Here</span> to see my work
+          </a>
+        </p>
 
         {metrics && (
           <ul className="project-metrics">
