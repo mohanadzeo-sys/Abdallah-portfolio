@@ -7,30 +7,32 @@ export default function About() {
         <div className="about-intro">
           <h2>About Me</h2>
           <p>
-            I am <strong>Abdullah Gamal</strong>, a Content Creator and Digital
-            Marketing Specialist passionate about transforming creative ideas
-            into high-performing short-form video content (Reels & Shorts) that
-            captures attention and builds authentic brand connections.
+            I am a <span>Content Creator Digital Marketing</span> |{" "}
+            <span>Content Strategy</span> | <span>Creative Production</span>, I
+            combine creativity with strategic thinking to create purposeful
+            content that connects with the right audience and supports brand
+            objectives.
           </p>
           <p>
-            I focus on understanding the audience, perfecting every second from
-            the hook to the call-to-action, and refining strategies based on
-            analytics.
+            From audience research and content strategy development to creative
+            ideation, scriptwriting, filming, and video editing, I turn ideas
+            into impactful content that builds brand presence and drives
+            measurable results.
           </p>
         </div>
 
         <ul className="about-stats">
           <li>
-            <strong>+13k</strong>
+            <strong>+5M</strong>
+            <span> Total Video Views</span>
+          </li>
+          <li>
+            <strong>+14k</strong>
             <span>followers gained</span>
           </li>
           <li>
-            <strong>+75%</strong>
-            <span>more leads</span>
-          </li>
-          <li>
-            <strong>+60%</strong>
-            <span>sales growth</span>
+            <strong>+150</strong>
+            <span>Content Pieces Produced</span>
           </li>
         </ul>
       </div>

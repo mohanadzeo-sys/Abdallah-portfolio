@@ -27,6 +27,9 @@
   font-weight: 700;
   font-size: 1.4rem;
 }
+#about .about-intro span {
+  color: var(--accent);
+}
 
 #about .about-stats {
   display: grid;
