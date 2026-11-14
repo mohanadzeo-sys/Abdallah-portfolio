@@ -1,5 +1,6 @@
 import { projects } from "../../data/projects.jsx";
 import "./WorkPage.css";
+import Brands from "../Brands/Brands.jsx";
 
 const focusAreas = [
   "Brand awareness",
@@ -88,6 +89,8 @@ export default function WorkPage() {
             ))}
           </ul>
         </header>
+
+        <Brands></Brands>
 
         <div className="work-grid">
           {projects.map((project) => (
